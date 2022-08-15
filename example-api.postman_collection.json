@@ -1,0 +1,182 @@
+{
+	"info": {
+		"_postman_id": "39da5847-6250-409c-ad6b-ff02e6f32b82",
+		"name": "example-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getUserById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "45cb7e95cf20afa4a12da72cacda0ba3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "USER_ID",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://kislorod-local/api/v1/user/getUserById/",
+					"protocol": "http",
+					"host": [
+						"kislorod-local"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"getUserById",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createUser",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "61fa45bb16b1f68a86c2c328c31fd694",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "testApiSasha",
+							"type": "text"
+						},
+						{
+							"key": "lastName",
+							"value": "test lastName",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "ssss@mail.ru",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "89532948744",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://kislorod-local/api/v1/user/createUser/",
+					"protocol": "http",
+					"host": [
+						"kislorod-local"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"createUser",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "removeUserById",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "45cb7e95cf20afa4a12da72cacda0ba3",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "USER_ID",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://kislorod-local/api/v1/user/removeUserById/",
+					"protocol": "http",
+					"host": [
+						"kislorod-local"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"removeUserById",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://kislorod-local/api/v1/user/auth/?login=admin&pass=123456",
+					"protocol": "http",
+					"host": [
+						"kislorod-local"
+					],
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"auth",
+						""
+					],
+					"query": [
+						{
+							"key": "login",
+							"value": "admin"
+						},
+						{
+							"key": "pass",
+							"value": "123456"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
